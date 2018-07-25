@@ -1,0 +1,5 @@
+*.lnk
+.vs/
+ipch/
+*.VC.db
+*.VC.opendb

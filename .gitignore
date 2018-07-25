@@ -1,3 +1,4 @@
+*.lnk
 build
 lxbuild
 winbuild
@@ -6,3 +7,6 @@ wbuild
 .vscode/.cmaketools.json
 .vscode
 etc/nng.sublime-workspace
+*.VS.db
+*.VS.opendb
+ipch/

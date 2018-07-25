@@ -27,7 +27,7 @@
 // underlying NNG headers
 #include "nng.h"
 #include "protocol/bus0/bus.h"
-#include "protocol/pair0/pair.h"
+#include "protocol/pair0/pair0.h"
 #include "protocol/pipeline0/pull.h"
 #include "protocol/pipeline0/push.h"
 #include "protocol/pubsub0/pub.h"

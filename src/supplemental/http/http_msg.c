@@ -77,8 +77,12 @@ http_headers_reset(nni_list *hdrs)
 	http_header *h;
 	while ((h = nni_list_first(hdrs)) != NULL) {
 		nni_list_remove(hdrs, h);
-		nni_strfree(h->name);
-		nni_strfree(h->value);
+		if (h->name != NULL) {
+			nni_strfree(h->name);
+		}
+		if (h->value != NULL) {
+			nni_free(h->value, strlen(h->value) + 1);
+		}
 		NNI_FREE_STRUCT(h);
 	}
 }
@@ -177,11 +181,13 @@ http_set_header(nni_list *hdrs, const char *key, const char *val)
 	http_header *h;
 	NNI_LIST_FOREACH (hdrs, h) {
 		if (nni_strcasecmp(key, h->name) == 0) {
-			char *news;
-			if ((news = nni_strdup(val)) == NULL) {
+			char * news;
+			size_t len = strlen(val) + 1;
+			if ((news = nni_alloc(len)) == NULL) {
 				return (NNG_ENOMEM);
 			}
-			nni_strfree(h->value);
+			snprintf(news, len, "%s", val);
+			nni_free(h->value, strlen(h->value) + 1);
 			h->value = news;
 			return (0);
 		}
@@ -194,11 +200,12 @@ http_set_header(nni_list *hdrs, const char *key, const char *val)
 		NNI_FREE_STRUCT(h);
 		return (NNG_ENOMEM);
 	}
-	if ((h->value = nni_strdup(val)) == NULL) {
+	if ((h->value = nni_alloc(strlen(val) + 1)) == NULL) {
 		nni_strfree(h->name);
 		NNI_FREE_STRUCT(h);
 		return (NNG_ENOMEM);
 	}
+	strncpy(h->value, val, strlen(val) + 1);
 	nni_list_append(hdrs, h);
 	return (0);
 }
@@ -221,13 +228,13 @@ http_add_header(nni_list *hdrs, const char *key, const char *val)
 	http_header *h;
 	NNI_LIST_FOREACH (hdrs, h) {
 		if (nni_strcasecmp(key, h->name) == 0) {
-			char *news;
-			int   rv;
-			rv = nni_asprintf(&news, "%s, %s", h->value, val);
-			if (rv != 0) {
-				return (rv);
+			char * news;
+			size_t len = strlen(h->value) + strlen(val) + 3;
+			if ((news = nni_alloc(len)) == NULL) {
+				return (NNG_ENOMEM);
 			}
-			nni_strfree(h->value);
+			snprintf(news, len, "%s, %s", h->value, val);
+			nni_free(h->value, strlen(h->value) + 1);
 			h->value = news;
 			return (0);
 		}
@@ -240,11 +247,12 @@ http_add_header(nni_list *hdrs, const char *key, const char *val)
 		NNI_FREE_STRUCT(h);
 		return (NNG_ENOMEM);
 	}
-	if ((h->value = nni_strdup(val)) == NULL) {
+	if ((h->value = nni_alloc(strlen(val) + 1)) == NULL) {
 		nni_strfree(h->name);
 		NNI_FREE_STRUCT(h);
 		return (NNG_ENOMEM);
 	}
+	strncpy(h->value, val, strlen(val) + 1);
 	nni_list_append(hdrs, h);
 	return (0);
 }
@@ -302,7 +310,7 @@ static int
 http_entity_alloc_data(nni_http_entity *entity, size_t size)
 {
 	void *newdata;
-	if ((newdata = nni_zalloc(size)) == NULL) {
+	if ((newdata = nni_alloc(size)) == NULL) {
 		return (NNG_ENOMEM);
 	}
 	http_entity_set_data(entity, newdata, size);

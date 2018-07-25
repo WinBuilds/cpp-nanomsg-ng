@@ -23,7 +23,7 @@
 #include "transport/tls/tls.h"
 #endif
 #ifdef NNG_TRANSPORT_WS
-#include "transport/ws/websocket.h"
+#include "transport/ws/ws.h"
 #endif
 #ifdef NNG_TRANSPORT_ZEROTIER
 #include "transport/zerotier/zerotier.h"

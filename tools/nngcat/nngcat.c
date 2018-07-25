@@ -18,8 +18,8 @@
 
 #include "nng.h"
 #include "protocol/bus0/bus.h"
-#include "protocol/pair0/pair.h"
-#include "protocol/pair1/pair.h"
+#include "protocol/pair0/pair0.h"
+#include "protocol/pair1/pair1.h"
 #include "protocol/pipeline0/pull.h"
 #include "protocol/pipeline0/push.h"
 #include "protocol/pubsub0/pub.h"
@@ -29,8 +29,8 @@
 #include "protocol/survey0/respond.h"
 #include "protocol/survey0/survey.h"
 #include "supplemental/tls/tls.h"
-#include "supplemental/util/options.h"
-#include "supplemental/util/platform.h"
+#include "supplemental/util/util_options.h"
+#include "supplemental/util/util_platform.h"
 #include "transport/zerotier/zerotier.h"
 
 // Globals.  We need this to avoid passing around everything.

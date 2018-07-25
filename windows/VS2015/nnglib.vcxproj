@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\compat\nanomsg\nn.c" />
+    <ClCompile Include="..\..\src\core\aio.c" />
+    <ClCompile Include="..\..\src\core\clock.c" />
+    <ClCompile Include="..\..\src\core\device.c" />
+    <ClCompile Include="..\..\src\core\dialer.c" />
+    <ClCompile Include="..\..\src\core\file.c" />
+    <ClCompile Include="..\..\src\core\idhash.c" />
+    <ClCompile Include="..\..\src\core\init.c" />
+    <ClCompile Include="..\..\src\core\list.c" />
+    <ClCompile Include="..\..\src\core\listener.c" />
+    <ClCompile Include="..\..\src\core\message.c" />
+    <ClCompile Include="..\..\src\core\msgqueue.c" />
+    <ClCompile Include="..\..\src\core\options.c" />
+    <ClCompile Include="..\..\src\core\panic.c" />
+    <ClCompile Include="..\..\src\core\pipe.c" />
+    <ClCompile Include="..\..\src\core\pollable.c" />
+    <ClCompile Include="..\..\src\core\protocol.c" />
+    <ClCompile Include="..\..\src\core\random.c" />
+    <ClCompile Include="..\..\src\core\reap.c" />
+    <ClCompile Include="..\..\src\core\socket.c" />
+    <ClCompile Include="..\..\src\core\strs.c" />
+    <ClCompile Include="..\..\src\core\taskq.c" />
+    <ClCompile Include="..\..\src\core\thread.c" />
+    <ClCompile Include="..\..\src\core\timer.c" />
+    <ClCompile Include="..\..\src\core\transport.c" />
+    <ClCompile Include="..\..\src\core\url.c" />
+    <ClCompile Include="..\..\src\nng.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_clock.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_debug.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_file.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_io.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_iocp.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_ipcconn.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_ipcdial.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_ipclisten.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_pipe.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_rand.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_resolv.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_sockaddr.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_tcp.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_tcpconn.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_tcpdial.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_tcplisten.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_thread.c" />
+    <ClCompile Include="..\..\src\platform\windows\win_udp.c" />
+    <ClCompile Include="..\..\src\protocol\bus0\bus.c" />
+    <ClCompile Include="..\..\src\protocol\pair0\pair0.c" />
+    <ClCompile Include="..\..\src\protocol\pair1\pair1.c" />
+    <ClCompile Include="..\..\src\protocol\pipeline0\pull.c" />
+    <ClCompile Include="..\..\src\protocol\pipeline0\push.c" />
+    <ClCompile Include="..\..\src\protocol\pubsub0\pub.c" />
+    <ClCompile Include="..\..\src\protocol\pubsub0\sub.c" />
+    <ClCompile Include="..\..\src\protocol\reqrep0\rep.c" />
+    <ClCompile Include="..\..\src\protocol\reqrep0\req.c" />
+    <ClCompile Include="..\..\src\protocol\reqrep0\xrep.c" />
+    <ClCompile Include="..\..\src\protocol\reqrep0\xreq.c" />
+    <ClCompile Include="..\..\src\protocol\survey0\respond.c" />
+    <ClCompile Include="..\..\src\protocol\survey0\survey.c" />
+    <ClCompile Include="..\..\src\protocol\survey0\xrespond.c" />
+    <ClCompile Include="..\..\src\protocol\survey0\xsurvey.c" />
+    <ClCompile Include="..\..\src\supplemental\base64\base64.c" />
+    <ClCompile Include="..\..\src\supplemental\http\http_client.c" />
+    <ClCompile Include="..\..\src\supplemental\http\http_conn.c" />
+    <ClCompile Include="..\..\src\supplemental\http\http_msg.c" />
+    <ClCompile Include="..\..\src\supplemental\http\http_public.c" />
+    <ClCompile Include="..\..\src\supplemental\http\http_server.c" />
+    <ClCompile Include="..\..\src\supplemental\sha1\sha1.c" />
+    <ClCompile Include="..\..\src\supplemental\tls\mbedtls\tls_mbedtls.c" />
+    <ClCompile Include="..\..\src\supplemental\util\util_options.c" />
+    <ClCompile Include="..\..\src\supplemental\util\util_platform.c" />
+    <ClCompile Include="..\..\src\supplemental\websocket\websocket.c" />
+    <ClCompile Include="..\..\src\transport\inproc\inproc.c" />
+    <ClCompile Include="..\..\src\transport\ipc\ipc.c" />
+    <ClCompile Include="..\..\src\transport\tcp\tcp.c" />
+    <ClCompile Include="..\..\src\transport\tls\tls.c" />
+    <ClCompile Include="..\..\src\transport\ws\ws.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\compat\nanomsg\bus.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\inproc.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\ipc.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\nn.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\pair.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\pipeline.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\pubsub.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\reqrep.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\survey.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\tcp.h" />
+    <ClInclude Include="..\..\src\compat\nanomsg\ws.h" />
+    <ClInclude Include="..\..\src\core\aio.h" />
+    <ClInclude Include="..\..\src\core\clock.h" />
+    <ClInclude Include="..\..\src\core\defs.h" />
+    <ClInclude Include="..\..\src\core\device.h" />
+    <ClInclude Include="..\..\src\core\dialer.h" />
+    <ClInclude Include="..\..\src\core\file.h" />
+    <ClInclude Include="..\..\src\core\idhash.h" />
+    <ClInclude Include="..\..\src\core\init.h" />
+    <ClInclude Include="..\..\src\core\list.h" />
+    <ClInclude Include="..\..\src\core\listener.h" />
+    <ClInclude Include="..\..\src\core\message.h" />
+    <ClInclude Include="..\..\src\core\msgqueue.h" />
+    <ClInclude Include="..\..\src\core\nng_impl.h" />
+    <ClInclude Include="..\..\src\core\options.h" />
+    <ClInclude Include="..\..\src\core\panic.h" />
+    <ClInclude Include="..\..\src\core\pipe.h" />
+    <ClInclude Include="..\..\src\core\platform.h" />
+    <ClInclude Include="..\..\src\core\pollable.h" />
+    <ClInclude Include="..\..\src\core\protocol.h" />
+    <ClInclude Include="..\..\src\core\random.h" />
+    <ClInclude Include="..\..\src\core\reap.h" />
+    <ClInclude Include="..\..\src\core\socket.h" />
+    <ClInclude Include="..\..\src\core\sockimpl.h" />
+    <ClInclude Include="..\..\src\core\strs.h" />
+    <ClInclude Include="..\..\src\core\taskq.h" />
+    <ClInclude Include="..\..\src\core\thread.h" />
+    <ClInclude Include="..\..\src\core\timer.h" />
+    <ClInclude Include="..\..\src\core\transport.h" />
+    <ClInclude Include="..\..\src\core\url.h" />
+    <ClInclude Include="..\..\src\nng.h" />
+    <ClInclude Include="..\..\src\platform\windows\win_impl.h" />
+    <ClInclude Include="..\..\src\platform\windows\win_ipc.h" />
+    <ClInclude Include="..\..\src\platform\windows\win_tcp.h" />
+    <ClInclude Include="..\..\src\protocol\bus0\bus.h" />
+    <ClInclude Include="..\..\src\protocol\pair0\pair0.h" />
+    <ClInclude Include="..\..\src\protocol\pair1\pair1.h" />
+    <ClInclude Include="..\..\src\protocol\pipeline0\pull.h" />
+    <ClInclude Include="..\..\src\protocol\pipeline0\push.h" />
+    <ClInclude Include="..\..\src\protocol\pubsub0\pub.h" />
+    <ClInclude Include="..\..\src\protocol\pubsub0\sub.h" />
+    <ClInclude Include="..\..\src\protocol\reqrep0\rep.h" />
+    <ClInclude Include="..\..\src\protocol\reqrep0\req.h" />
+    <ClInclude Include="..\..\src\protocol\survey0\respond.h" />
+    <ClInclude Include="..\..\src\protocol\survey0\survey.h" />
+    <ClInclude Include="..\..\src\supplemental\base64\base64.h" />
+    <ClInclude Include="..\..\src\supplemental\http\http.h" />
+    <ClInclude Include="..\..\src\supplemental\http\http_api.h" />
+    <ClInclude Include="..\..\src\supplemental\sha1\sha1.h" />
+    <ClInclude Include="..\..\src\supplemental\tls\tls.h" />
+    <ClInclude Include="..\..\src\supplemental\tls\tls_api.h" />
+    <ClInclude Include="..\..\src\supplemental\util\util_options.h" />
+    <ClInclude Include="..\..\src\supplemental\util\util_platform.h" />
+    <ClInclude Include="..\..\src\supplemental\websocket\websocket.h" />
+    <ClInclude Include="..\..\src\transport\inproc\inproc.h" />
+    <ClInclude Include="..\..\src\transport\ipc\ipc.h" />
+    <ClInclude Include="..\..\src\transport\tcp\tcp.h" />
+    <ClInclude Include="..\..\src\transport\tls\tls.h" />
+    <ClInclude Include="..\..\src\transport\ws\ws.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3E74B6A2-CB81-41B6-A417-358A497CE750}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>nnglib</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/lib/</OutDir>
+    <IntDir>$(SolutionDir)../../../../build_msvc14_$(Platform)/$(Configuration)/obj/$(ProjectName)/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_RAND_S;_WIN32_WINNT=0x0600;NNG_STATIC_LIB;NNG_PRIVATE;NNG_HAVE_BUS0;NNG_HAVE_PAIR0;NNG_HAVE_PAIR1;NNG_HAVE_REQ0;NNG_HAVE_REP0;NNG_HAVE_PUB0;NNG_HAVE_SUB0;NNG_HAVE_PUSH0;NNG_HAVE_PULL0;NNG_HAVE_SURVEYOR0;NNG_HAVE_RESPONDENT0;NNG_TRANSPORT_INPROC;NNG_TRANSPORT_IPC;NNG_TRANSPORT_TCP;NNG_TRANSPORT_WS;NNG_LITTLE_ENDIAN;NNG_PLATFORM_WINDOWS;NNG_HAVE_CONDVAR=1;NNG_HAVE_SNPRINTF=1;NNG_HAVE_STRNLEN=1;NNG_SUPP_HTTP</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\src;$(OutDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg"
+copy "$(SolutionDir)..\..\src\nng.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" 
+xcopy "$(SolutionDir)..\..\src\compat\nanomsg\*.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" /E /I /R /Y /D</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copying header files..</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_RAND_S;_WIN32_WINNT=0x0600;NNG_STATIC_LIB;NNG_PRIVATE;NNG_HAVE_BUS0;NNG_HAVE_PAIR0;NNG_HAVE_PAIR1;NNG_HAVE_REQ0;NNG_HAVE_REP0;NNG_HAVE_PUB0;NNG_HAVE_SUB0;NNG_HAVE_PUSH0;NNG_HAVE_PULL0;NNG_HAVE_SURVEYOR0;NNG_HAVE_RESPONDENT0;NNG_TRANSPORT_INPROC;NNG_TRANSPORT_IPC;NNG_TRANSPORT_TCP;NNG_TRANSPORT_WS;NNG_LITTLE_ENDIAN;NNG_PLATFORM_WINDOWS;NNG_HAVE_CONDVAR=1;NNG_HAVE_SNPRINTF=1;NNG_HAVE_STRNLEN=1;NNG_SUPP_HTTP</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\src;$(OutDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg"
+copy "$(SolutionDir)..\..\src\nng.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" 
+xcopy "$(SolutionDir)..\..\src\compat\nanomsg\*.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" /E /I /R /Y /D</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copying header files..</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_RAND_S;_WIN32_WINNT=0x0600;NNG_STATIC_LIB;NNG_PRIVATE;NNG_HAVE_BUS0;NNG_HAVE_PAIR0;NNG_HAVE_PAIR1;NNG_HAVE_REQ0;NNG_HAVE_REP0;NNG_HAVE_PUB0;NNG_HAVE_SUB0;NNG_HAVE_PUSH0;NNG_HAVE_PULL0;NNG_HAVE_SURVEYOR0;NNG_HAVE_RESPONDENT0;NNG_TRANSPORT_INPROC;NNG_TRANSPORT_IPC;NNG_TRANSPORT_TCP;NNG_TRANSPORT_WS;NNG_LITTLE_ENDIAN;NNG_PLATFORM_WINDOWS;NNG_HAVE_CONDVAR=1;NNG_HAVE_SNPRINTF=1;NNG_HAVE_STRNLEN=1;NNG_SUPP_HTTP</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\src;$(OutDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg"
+copy "$(SolutionDir)..\..\src\nng.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" 
+xcopy "$(SolutionDir)..\..\src\compat\nanomsg\*.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" /E /I /R /Y /D</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copying header files..</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_CRT_RAND_S;_WIN32_WINNT=0x0600;NNG_STATIC_LIB;NNG_PRIVATE;NNG_HAVE_BUS0;NNG_HAVE_PAIR0;NNG_HAVE_PAIR1;NNG_HAVE_REQ0;NNG_HAVE_REP0;NNG_HAVE_PUB0;NNG_HAVE_SUB0;NNG_HAVE_PUSH0;NNG_HAVE_PULL0;NNG_HAVE_SURVEYOR0;NNG_HAVE_RESPONDENT0;NNG_TRANSPORT_INPROC;NNG_TRANSPORT_IPC;NNG_TRANSPORT_TCP;NNG_TRANSPORT_WS;NNG_LITTLE_ENDIAN;NNG_PLATFORM_WINDOWS;NNG_HAVE_CONDVAR=1;NNG_HAVE_SNPRINTF=1;NNG_HAVE_STRNLEN=1;NNG_SUPP_HTTP</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\src;$(OutDir)..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg"
+copy "$(SolutionDir)..\..\src\nng.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" 
+xcopy "$(SolutionDir)..\..\src\compat\nanomsg\*.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\nanomsg\" /E /I /R /Y /D</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>copying header files..</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
