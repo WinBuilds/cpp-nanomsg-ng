@@ -532,7 +532,7 @@ nni_tls_net_send(void *ctx, const unsigned char *buf, size_t len)
 	nni_aio_set_iov(tp->tcp_send, 1, &iov);
 	nni_aio_set_timeout(tp->tcp_send, NNG_DURATION_INFINITE);
 	nni_tcp_conn_send(tp->tcp, tp->tcp_send);
-	return (len);
+	return (int)len;
 }
 
 static int
